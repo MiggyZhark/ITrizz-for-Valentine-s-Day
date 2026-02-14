@@ -345,7 +345,6 @@
   left: 0;
   right: 0;
   z-index: 2;
-  contain: layout style paint;
 }
 
 .heart,
@@ -394,7 +393,6 @@
   transform: scale(0.6);
   animation:
     slideUp 4s linear infinite,
-  will-change: transform, opacity;
     sideSway 2s ease-in-out infinite alternate;
 }
 .a2 {
@@ -413,7 +411,6 @@
 
 .s1 {
   left: 30%;
-  will-change: transform, opacity;
   animation: sparkleUp 3s linear infinite;
 }
 .s2 {
@@ -436,13 +433,13 @@
 
 @keyframes sideSway {
   0% {
-    transform: translateX(0);
+    margin-left: 0;
   }
   50% {
-    transform: translateX(50px);
+    margin-left: 50px;
   }
   100% {
-    transform: translateX(0);
+    margin-left: 0;
   }
 }
 
@@ -519,7 +516,6 @@ body {
   pointer-events: none;
 }
 
-
 /* Valentine Dialog Styles */
 .valentine-dialog-overlay {
   position: fixed;
@@ -567,7 +563,8 @@ body {
 }
 
 @keyframes catBounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -692,13 +689,14 @@ body {
   font-size: 12px;
   font-weight: bold;
   color: rgba(255, 106, 130, 0.35);
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   letter-spacing: 2px;
   opacity: 0.6;
 }
 
 @media (max-width: 480px) {
-  html, body {
+  html,
+  body {
     height: 100%;
     overflow-y: hidden; /* disable vertical scrolling on small screens */
     -webkit-overflow-scrolling: auto;
