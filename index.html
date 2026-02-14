@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Valentines</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="Assets/heart_cute_emoji_emo_icon_131637.ico"
+    />
+  </head>
+  <body>
+    <audio src="Assets/Sound.mp3" id="mySound" preload="none"></audio>
+    <audio autoplay loop="true" id="myMusic" preload="auto">
+      <source src="Assets/music4.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div class="sakura-container">
+      <div class="sakura"></div>
+      <div class="sakura"></div>
+      <div class="sakura"></div>
+      <div class="sakura"></div>
+      <div class="sakura"></div>
+      <div class="sakura"></div>
+      <div class="sakura"></div>
+      <div class="sakura"></div>
+      <div class="sakura"></div>
+      <div class="sakura"></div>
+    </div>
+
+    <img
+      src="Assets/Flowers4.png"
+      class="bouquet-image"
+      alt="Bouquet"
+      loading="lazy"
+    />
+
+    <div class="valentine-dialog-overlay" id="valentineOverlay">
+      <div class="valentine-dialog">
+        <h2>Do you want some Chocolates?</h2>
+        <img
+          src="https://media.tenor.com/pdv5YIMB-hkAAAAj/cute.gif"
+          alt="Cute Cat"
+          class="dialog-cat-gif"
+          id="catGif"
+          data-default="https://media.tenor.com/pdv5YIMB-hkAAAAj/cute.gif"
+          data-happy="https://media.tenor.com/b82PSPSF74wAAAAi/happy.gif"
+          data-sad="https://media1.tenor.com/m/d9PoZm99CTgAAAAC/sadcat-crying-cat.gif"
+        />
+        <div class="dialog-buttons">
+          <button id="yesBtn" class="btn-yes">YES! 💗</button>
+          <button id="noBtn" class="btn-no">No 😢</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="envlope-wrapper">
+      <div id="envelope" class="close">
+        <div class="stamp"></div>
+
+        <div class="wax-seal"></div>
+        <div class="front flap"></div>
+        <div class="front pocket"></div>
+        <div class="letter">
+          <div class="letter-corner corner-tl"></div>
+          <div class="letter-corner corner-br"></div>
+          <div class="message">
+            <p id="name">To: Obviously You</p>
+            <p>Who needs chocolates…</p>
+            <p>-when you have me?-</p>
+            <img
+              src="https://media.tenor.com/ke7Tc79govIAAAAi/rizz.gif"
+              width="60px"
+              height="auto"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="hearts">
+          <div class="heart a1"></div>
+          <div class="heart a2"></div>
+          <div class="heart a3"></div>
+        </div>
+        <div class="sparkles">
+          <div class="sparkle s1"></div>
+          <div class="sparkle s2"></div>
+          <div class="sparkle s3"></div>
+        </div>
+      </div>
+    </div>
+    <div class="reset">
+      <button id="open">Open Envelope</button>
+      <button id="reset">Close Envelope</button>
+    </div>
+
+    <!-- Watermark -->
+    <div class="watermark">
+      <div class="watermark-circle">Miggy</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="script.js" defer></script>
+    <script>
+      function open() {
+        document.getElementById("mySound").play();
+        document.getElementById("myMusic").play();
+      }
+    </script>
+  </body>
+</html>
